@@ -1,18 +1,18 @@
 package auth
 
 import (
-	"testing"
 	"net/http"
+	"testing"
 )
 
 func TestGetAPIKey(t *testing.T) {
 	type test struct {
-		name string
-		input http.Header
-		want string
+		name      string
+		input     http.Header
+		want      string
 		wantError error
 	}
-	
+
 	headerEmpty := http.Header{
 		"Host": {"boot.dev"},
 	}
